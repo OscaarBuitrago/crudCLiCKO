@@ -22,3 +22,6 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 Route::apiResource('users', UserController::class);
 
+Route::get('mostUsedDomains', [UserController::class, 'topDomains']);
+
+

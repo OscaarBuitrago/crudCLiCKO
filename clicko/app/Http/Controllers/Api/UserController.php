@@ -132,4 +132,36 @@ class UserController extends Controller
        
         }
     }
+
+    public function topDomains()
+    {
+        // Getting the users email.
+        $emails = User::pluck('email');
+
+        // Splitting the domain part of the email address.
+        $domains = $emails->map(function ($email) {
+            $parts = explode('@', $email);
+            return end($parts);
+        });
+
+        // Count how many times is each domain name.
+        $countedDomains = $domains->countBy();
+
+        // Sort the domains from the most repited to the less one.
+        $sortedDomains = $countedDomains->sortDesc();
+
+        // Getting the 3 most repited domains.        
+        $top3Domains = $sortedDomains->take(3)->map(function ($quantity, $domain) {
+            return [
+                'domain' => $domain,
+                'quantity' => $quantity,
+            ];
+        });
+
+        return response()->json([
+            "success" => true,
+            "data"    =>$top3Domains  
+        ]);
+    }
+       
 }
