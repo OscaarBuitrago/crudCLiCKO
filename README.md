@@ -12,33 +12,33 @@ This is a simple CRUD (Create, Read, Update, Delete) API built using Laravel to 
 
 ## Endpoints
 
-## Get the 3 most used domains in user emails
+    ## Get the 3 most used domains in user emails
 
-This API endpoint returns the three most frequently used domains in user emails, along with the count of each domain, in descending order.
+    This API endpoint returns the three most frequently used domains in user emails, along with the count of each domain, in descending order.
 
-- **URL**: `http://127.0.0.1:8000/api/mostUsedDomains`
+    - **URL**: `http://127.0.0.1:8000/api/mostUsedDomains`
 
-- **HTTP Method**: GET
+    - **HTTP Method**: GET
 
-- **Input Parameters**: None
+    - **Input Parameters**: None
 
-- **Response**:
+    - **Response**:
 
-```json
-[
-  {
-    "domain": "gmail.com",
-    "count": 15
-  },
-  {
-    "domain": "yahoo.com",
-    "count": 10
-  },
-  {
-    "domain": "hotmail.com",
-    "count": 8
-  }
-]
+    ```json
+    [
+        {
+            "domain": "gmail.com",
+            "count": 15
+        },
+        {
+            "domain": "yahoo.com",
+            "count": 10
+        },
+        {
+            "domain": "hotmail.com",
+            "count": 8
+        }
+    ]
 
 
 ### List Users
