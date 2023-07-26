@@ -12,7 +12,7 @@ This is a simple CRUD (Create, Read, Update, Delete) API built using Laravel to 
 
 ## Endpoints
 
-Get the 3 most used domains in user emails
+## Get the 3 most used domains in user emails
 
 This API endpoint returns the three most frequently used domains in user emails, along with the count of each domain, in descending order.
 
